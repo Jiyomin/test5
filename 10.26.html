@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            width: 50px;
+            height: 50px;
+            background: red;;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="isRed = !isRed">click</button>
+    <div :class="{red:isRed}"></div>
+
+</div>
+</body>
+<script src="../fellows14/Vue/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            red:'red',
+            isRed:true
+            },
+       methods: {
+            fn(){
+                     this.isRed = !this.isRed;
+            }
+        }
+    })
+
+</script>
+</html>
+
+
+<!--//访问器属性-->
+<!--var obj = {};-->
+<!--Object.defineProperty(obj,'name',{-->
+<!--set:function(val){-->
+<!--document.getElementById('ipt').value = val;-->
+<!--}-->
+<!--})-->
